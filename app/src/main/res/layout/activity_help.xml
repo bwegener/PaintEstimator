@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paintbackground"
+    tools:context="edu.orangecoastcollege.cs273.bwegener.paintestimator.HelpActivity">
+
+    <TextView
+        android:id="@+id/paintRequired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paint_required"
+        tools:layout_editor_absoluteX="339dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="282dp"
+        android:layout_marginStart="282dp" />
+
+    <Button
+        android:id="@+id/roomDimensionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="@string/room_button_text"
+        android:layout_marginLeft="265dp"
+        android:layout_marginStart="265dp"
+        android:layout_below="@+id/paintRequired"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="@string/help_text"
+        android:layout_below="@+id/roomDimensionsButton" />
+</RelativeLayout>

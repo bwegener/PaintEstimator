@@ -14,9 +14,12 @@
 
     <string name="compute_button_text">Compute Gallons</string>
     <string name="help_button_text">Help</string>
+    <string name="room_button_text">Input Room Dimensions</string>
 
     <string name="gallons">Gallons</string>
     <string name="return_btn">Input Room Dimensions</string>
+
+    <string name="paint_required">Estimated Paint Required:</string>
 
     <!-- HELP TEXT -->
     <string name="help_text">
