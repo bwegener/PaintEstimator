@@ -68,8 +68,7 @@
         android:ems="10"
         android:inputType="number"
         android:layout_alignRight="@+id/roomDimensions"
-        android:layout_alignEnd="@+id/roomDimensions"
-        android:layout_alignTop="@+id/length" />
+        android:layout_alignEnd="@+id/roomDimensions" />
 
     <EditText
         android:id="@+id/widthEditText"
@@ -81,8 +80,8 @@
         android:inputType="number"
         android:layout_alignRight="@+id/lengthEditText"
         android:layout_alignEnd="@+id/lengthEditText"
-        android:layout_alignTop="@+id/width"
-        android:layout_above="@+id/height" />
+        android:layout_above="@+id/height"
+        android:layout_below="@+id/lengthEditText" />
 
     <EditText
         android:id="@+id/heightEditText"
@@ -160,6 +159,7 @@
         android:layout_alignStart="@+id/windows"
         android:layout_below="@+id/windows"
         android:layout_marginTop="37dp"
+        android:onClick="computeGallons"
         android:text="@string/compute_button_text" />
 
     <Button
@@ -167,19 +167,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/help_button_text"
+        android:onClick="goToHelp"
         android:layout_alignBaseline="@+id/computeGallonsButton"
         android:layout_alignBottom="@+id/computeGallonsButton"
         android:layout_alignRight="@+id/heightEditText"
         android:layout_alignEnd="@+id/heightEditText" />
 
     <TextView
-        android:id="@+id/gallons"
+        android:id="@+id/surfaceArea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/computeGallonsButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="121dp"
-        android:text="@string/gallons" />
+        android:text="@string/interior_surface_area" />
+
+    <TextView
+        android:id="@+id/gallons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/surfaceArea"
+        android:layout_centerHorizontal="true"
+        android:text="@string/gallons_needed" />
 
 
 </RelativeLayout>

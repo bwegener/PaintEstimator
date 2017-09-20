@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
         android:text="@string/room_button_text"
+        android:onClick="goToMain"
         android:layout_marginLeft="265dp"
         android:layout_marginStart="265dp"
         android:layout_below="@+id/paintRequired"
@@ -34,9 +35,12 @@
 
     <TextView
         android:id="@+id/notes"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
         android:text="@string/help_text"
-        android:layout_below="@+id/roomDimensionsButton" />
+        android:layout_marginTop="108dp"
+        android:layout_below="@+id/roomDimensionsButton"
+        android:layout_alignRight="@+id/paintRequired"
+        android:layout_alignEnd="@+id/paintRequired" />
+
 </RelativeLayout>

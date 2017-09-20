@@ -38,7 +38,7 @@ public class InteriorRoom {
         return mWidth;
     }
 
-    public void semWidth(float width) {
+    public void setWidth(float width) {
         mWidth = width;
     }
 

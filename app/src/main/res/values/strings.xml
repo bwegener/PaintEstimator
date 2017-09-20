@@ -12,6 +12,9 @@
     <string name="doors">Doors</string>
     <string name="windows">Windows</string>
 
+    <string name="interior_surface_area">Interior surface area:</string>
+    <string name="gallons_needed">Gallons needed:</string>
+
     <string name="compute_button_text">Compute Gallons</string>
     <string name="help_button_text">Help</string>
     <string name="room_button_text">Input Room Dimensions</string>
