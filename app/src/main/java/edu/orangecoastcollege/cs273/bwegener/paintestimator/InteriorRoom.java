@@ -3,6 +3,9 @@ package edu.orangecoastcollege.cs273.bwegener.paintestimator;
 /**
  *
  *
+ * @author Brian Wegener
+ * @version 1.0
+ *
  * Created on 9/19/2017.
  */
 

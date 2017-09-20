@@ -93,8 +93,8 @@
         android:inputType="number"
         android:layout_alignRight="@+id/widthEditText"
         android:layout_alignEnd="@+id/widthEditText"
-        android:layout_alignTop="@+id/height"
-        android:layout_alignBottom="@+id/height" />
+        android:layout_alignBottom="@+id/height"
+        android:layout_below="@+id/widthEditText"/>
 
     <TextView
         android:id="@+id/doorsWindows"
@@ -134,7 +134,6 @@
         android:layout_alignStart="@+id/heightEditText"
         android:ems="10"
         android:inputType="number"
-        android:layout_alignTop="@+id/doors"
         android:layout_alignRight="@+id/doorsWindows"
         android:layout_alignEnd="@+id/doorsWindows" />
 
@@ -146,10 +145,10 @@
         android:layout_alignStart="@+id/doorsEditText"
         android:ems="10"
         android:inputType="number"
-        android:layout_alignTop="@+id/windows"
         android:layout_alignRight="@+id/doorsEditText"
         android:layout_alignEnd="@+id/doorsEditText"
-        android:layout_alignBottom="@+id/windows" />
+        android:layout_alignBottom="@+id/windows"
+        android:layout_below="@+id/doorsEditText"/>
 
     <Button
         android:id="@+id/computeGallonsButton"
@@ -173,22 +172,16 @@
         android:layout_alignRight="@+id/heightEditText"
         android:layout_alignEnd="@+id/heightEditText" />
 
-    <TextView
-        android:id="@+id/surfaceArea"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/computeGallonsButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="121dp"
-        android:text="@string/interior_surface_area" />
+
 
     <TextView
         android:id="@+id/gallons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/surfaceArea"
+        android:text="@string/gallons_needed"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/gallons_needed" />
+        android:layout_marginBottom="96dp"/>
 
 
 </RelativeLayout>
