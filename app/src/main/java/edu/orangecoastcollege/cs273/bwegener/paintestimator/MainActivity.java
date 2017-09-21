@@ -4,12 +4,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import java.text.DecimalFormat;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.text.NumberFormat;
+import java.text.DecimalFormat;
 
 /**
  * The Main Activity is the first activity loaded when the app is called.
@@ -55,19 +54,19 @@ public class MainActivity extends AppCompatActivity {
         if (mPrefs != null) {
             // Load all the room information
             mRoom.setDoors(mPrefs.getInt("doors", 0));
-            mDoorsEditText.setText(String.valueOf(mRoom.getDoors()));
+            //mDoorsEditText.setText(String.valueOf(mRoom.getDoors()));
 
             mRoom.setWindows(mPrefs.getInt("windows", 0));
-            mWindowsEditText.setText(String.valueOf(mRoom.getWindows()));
+            //mWindowsEditText.setText(String.valueOf(mRoom.getWindows()));
 
             mRoom.setLength(mPrefs.getFloat("length", 0.0f));
-            mLengthEditText.setText(String.valueOf(mRoom.getLength()));
+            //mLengthEditText.setText(String.valueOf(mRoom.getLength()));
 
             mRoom.setHeight(mPrefs.getFloat("height", 0.0f));
-            mHeightEditText.setText(String.valueOf(mRoom.getHeight()));
+            //mHeightEditText.setText(String.valueOf(mRoom.getHeight()));
 
             mRoom.setWidth(mPrefs.getFloat("width", 0.0f));
-            mWidthEditText.setText(String.valueOf(mRoom.getWidth()));
+            //mWidthEditText.setText(String.valueOf(mRoom.getWidth()));
         }
     }
 
