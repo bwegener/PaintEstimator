@@ -12,6 +12,9 @@ import android.widget.TextView;
 import java.text.NumberFormat;
 
 /**
+ * The Main Activity is the first activity loaded when the app is called.
+ * It is also where the user will be able to enter data that is saved
+ * and used throughout the app.
  *
  * @author Brian Wegener
  * @version 1.0
@@ -80,9 +83,16 @@ public class MainActivity extends AppCompatActivity {
 
         // Save the changes to the SharedPreferences file
         editor.commit();
-
     }
 
+    /**
+     * The app is created and then the user can enter length, height, and width, as well
+     * as doors and windows, these numbers are calculated and displayed on the bottom of the
+     * screen.
+     * The user can also choose to get help with the app.
+     *
+     * @param savedInstanceState this is what happens when the app loads.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,6 +102,12 @@ public class MainActivity extends AppCompatActivity {
         loadSharedPreferences();
     }
 
+    /**
+     * This handles the calculations and then displays the information to the user.
+     *
+     * @param v this computes the gallons of paint needed as well as the entire surface area
+     *          of the room when clicked.
+     */
     protected void computeGallons(View v) {
         // Update model first, then calculate
         mRoom.setLength(Float.parseFloat(mLengthEditText.getText().toString()));
@@ -115,6 +131,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This sends the user to the help activity, which is also another screen
+     * where the paint required is displayed if entered in the main activity/screen,
+     * otherwise the user is displayed notes about the calculation.
+     *
+     * @param v this is the view that is created when the user clicks the help button.
+     */
     protected void goToHelp(View v) {
 
         String paintRequired = "Estimated Paint Required: " + tenDP.format(mRoom.gallonsOfPaintRequired());

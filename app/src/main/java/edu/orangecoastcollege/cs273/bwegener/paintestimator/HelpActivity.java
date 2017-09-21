@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 
 /**
+ * The Help Activity is where the help note is explained as well
+ * as getting info from the main activity and displaying
+ * the amount of gallons needed
  *
  * @author Brian Wegener
  * @version 1.0
@@ -18,6 +21,12 @@ public class HelpActivity extends AppCompatActivity {
 
     private TextView mPaintRequired;
 
+    /**
+     * The onCreate for the Help Activity brings the amount of paint required
+     * from the Main Activity over and displays it.
+     *
+     * @param savedInstanceState this is what happens every time the app is loaded.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +41,13 @@ public class HelpActivity extends AppCompatActivity {
 
         // Fill your TextView with data from the paint required
         mPaintRequired.setText(paintRequired);
-
-
     }
 
+    /**
+     * This allows the user to return to the Main Activity.
+     *
+     * @param v this calls the view from Main Activity.
+     */
     protected void goToMain(View v)
     {
         // Construct an EXPLICIT Intent to go to HelpActivity
