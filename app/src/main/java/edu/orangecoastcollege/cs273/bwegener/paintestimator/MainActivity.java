@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
      */
     protected void goToHelp(View v) {
 
-        String paintRequired = "Estimated Paint Required: " + tenDP.format(mRoom.gallonsOfPaintRequired());
+        String paintRequired = "Estimated Paint Required: " + tenDP.format(mRoom.gallonsOfPaintRequired()) + " gallons";
 
         // Construct an EXPLICIT Intent to go to HelpActivity
         // Intent: specify where to start (context) and where we're going (next Activity)
