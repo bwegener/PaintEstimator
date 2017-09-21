@@ -2,12 +2,14 @@ package edu.orangecoastcollege.cs273.bwegener.paintestimator;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.icu.text.DecimalFormat;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import java.text.DecimalFormat;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.text.NumberFormat;
 
 /**
  *
@@ -17,6 +19,8 @@ import android.widget.TextView;
  * Created on 9/19/2017.
  */
 public class MainActivity extends AppCompatActivity {
+
+    DecimalFormat tenDP = new DecimalFormat("#.0");
 
     // Member variables for the Views
     private EditText mLengthEditText;
@@ -99,11 +103,11 @@ public class MainActivity extends AppCompatActivity {
         if (mRoom.totalSurfaceArea() < 1)
             mGallonsTextView.setText("Interior surface area: 0 feet\nGallons needed: 0");
         else if (mRoom.totalSurfaceArea() >= 1 && mRoom.totalSurfaceArea() < 2)
-            mGallonsTextView.setText(getString(R.string.interior_surface_area) + " " + Math.round(mRoom.totalSurfaceArea()) +
-                    " foot\n" + getString(R.string.gallons_needed) + " " + Math.round(mRoom.gallonsOfPaintRequired()));
+            mGallonsTextView.setText(getString(R.string.interior_surface_area) + " " + tenDP.format(mRoom.totalSurfaceArea()) +
+                    " foot\n" + getString(R.string.gallons_needed) + " " + tenDP.format(mRoom.gallonsOfPaintRequired()));
         else
-            mGallonsTextView.setText(getString(R.string.interior_surface_area) + " " + Math.round(mRoom.totalSurfaceArea()) +
-                    " feet\n" + getString(R.string.gallons_needed) + " " + Math.round(mRoom.gallonsOfPaintRequired()));
+            mGallonsTextView.setText(getString(R.string.interior_surface_area) + " " + tenDP.format(mRoom.totalSurfaceArea()) +
+                    " feet\n" + getString(R.string.gallons_needed) + " " + tenDP.format(mRoom.gallonsOfPaintRequired()));
 
         // This happens when the compute gallons button is clicked
         saveSharedPreferences();
@@ -112,10 +116,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void goToHelp(View v) {
+
+        String paintRequired = "Estimated Paint Required: " + tenDP.format(mRoom.gallonsOfPaintRequired());
+
         // Construct an EXPLICIT Intent to go to HelpActivity
         // Intent: specify where to start (context) and where we're going (next Activity)
-        Intent helpIntent = new Intent(this, HelpActivity.class);
-        helpIntent.putExtra("gallons", mRoom.gallonsOfPaintRequired());
-        startActivity(helpIntent);
+        Intent launchHelpActivity = new Intent(this, HelpActivity.class);
+
+        launchHelpActivity.putExtra("gallons", paintRequired);
+
+        startActivity(launchHelpActivity);
     }
 }

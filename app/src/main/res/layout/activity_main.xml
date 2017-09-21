@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/paintbackground"
-    tools:context="edu.orangecoastcollege.cs273.bwegener.paintestimator.MainActivity">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/paintbackground"
+                tools:context="edu.orangecoastcollege.cs273.bwegener.paintestimator.MainActivity">
 
 
     <TextView
@@ -15,7 +15,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="23dp"
-        android:text="@string/app_name" />
+        android:text="@string/app_name"
+        android:textSize="25sp"/>
 
     <TextView
         android:id="@+id/roomDimensions"
@@ -24,7 +25,8 @@
         android:layout_below="@+id/appName"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
-        android:text="@string/enter_dimensions" />
+        android:text="@string/enter_dimensions"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/length"
@@ -34,7 +36,8 @@
         android:layout_alignStart="@+id/roomDimensions"
         android:layout_below="@+id/roomDimensions"
         android:layout_marginTop="34dp"
-        android:text="@string/length" />
+        android:text="@string/length"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/width"
@@ -44,7 +47,8 @@
         android:layout_alignStart="@+id/length"
         android:layout_below="@+id/length"
         android:layout_marginTop="24dp"
-        android:text="@string/width" />
+        android:text="@string/width"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/height"
@@ -54,47 +58,54 @@
         android:layout_alignStart="@+id/width"
         android:layout_below="@+id/width"
         android:layout_marginTop="27dp"
-        android:text="@string/height" />
+        android:text="@string/height"
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/lengthEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/length"
+        android:layout_alignEnd="@+id/roomDimensions"
         android:layout_alignLeft="@+id/appName"
+        android:layout_alignRight="@+id/roomDimensions"
         android:layout_alignStart="@+id/appName"
         android:layout_marginLeft="49dp"
         android:layout_marginStart="49dp"
         android:ems="10"
         android:inputType="number"
-        android:layout_alignRight="@+id/roomDimensions"
-        android:layout_alignEnd="@+id/roomDimensions" />
+        android:textAlignment="center"
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/widthEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/height"
+        android:layout_alignEnd="@+id/lengthEditText"
         android:layout_alignLeft="@+id/lengthEditText"
+        android:layout_alignRight="@+id/lengthEditText"
         android:layout_alignStart="@+id/lengthEditText"
+        android:layout_below="@+id/lengthEditText"
         android:ems="10"
         android:inputType="number"
-        android:layout_alignRight="@+id/lengthEditText"
-        android:layout_alignEnd="@+id/lengthEditText"
-        android:layout_above="@+id/height"
-        android:layout_below="@+id/lengthEditText" />
+        android:textAlignment="center"
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/heightEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/height"
+        android:layout_alignEnd="@+id/widthEditText"
         android:layout_alignLeft="@+id/widthEditText"
+        android:layout_alignRight="@+id/widthEditText"
         android:layout_alignStart="@+id/widthEditText"
+        android:layout_below="@+id/widthEditText"
         android:ems="10"
         android:inputType="number"
-        android:layout_alignRight="@+id/widthEditText"
-        android:layout_alignEnd="@+id/widthEditText"
-        android:layout_alignBottom="@+id/height"
-        android:layout_below="@+id/widthEditText"/>
+        android:textAlignment="center"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/doorsWindows"
@@ -103,7 +114,8 @@
         android:layout_below="@+id/heightEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="159dp"
-        android:text="@string/enter_door_window" />
+        android:text="@string/enter_door_window"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/doors"
@@ -113,7 +125,8 @@
         android:layout_alignStart="@+id/height"
         android:layout_below="@+id/doorsWindows"
         android:layout_marginTop="32dp"
-        android:text="@string/doors" />
+        android:text="@string/doors"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/windows"
@@ -123,32 +136,37 @@
         android:layout_alignStart="@+id/doors"
         android:layout_below="@+id/doors"
         android:layout_marginTop="28dp"
-        android:text="@string/windows" />
+        android:text="@string/windows"
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/doorsEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/windows"
+        android:layout_alignEnd="@+id/helpButton"
         android:layout_alignLeft="@+id/heightEditText"
+        android:layout_alignRight="@+id/helpButton"
         android:layout_alignStart="@+id/heightEditText"
         android:ems="10"
         android:inputType="number"
-        android:layout_alignRight="@+id/doorsWindows"
-        android:layout_alignEnd="@+id/doorsWindows" />
+        android:textAlignment="center"
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/windowsEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/windows"
+        android:layout_alignEnd="@+id/doorsEditText"
         android:layout_alignLeft="@+id/doorsEditText"
+        android:layout_alignRight="@+id/doorsEditText"
         android:layout_alignStart="@+id/doorsEditText"
+        android:layout_below="@+id/doorsEditText"
         android:ems="10"
         android:inputType="number"
-        android:layout_alignRight="@+id/doorsEditText"
-        android:layout_alignEnd="@+id/doorsEditText"
-        android:layout_alignBottom="@+id/windows"
-        android:layout_below="@+id/doorsEditText"/>
+        android:textAlignment="center"
+        android:textSize="18sp"/>
 
     <Button
         android:id="@+id/computeGallonsButton"
@@ -159,29 +177,32 @@
         android:layout_below="@+id/windows"
         android:layout_marginTop="37dp"
         android:onClick="computeGallons"
-        android:text="@string/compute_button_text" />
+        android:text="@string/compute_button_text"
+        android:textSize="18sp"/>
 
     <Button
         android:id="@+id/helpButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/help_button_text"
-        android:onClick="goToHelp"
         android:layout_alignBaseline="@+id/computeGallonsButton"
         android:layout_alignBottom="@+id/computeGallonsButton"
+        android:layout_alignEnd="@+id/heightEditText"
         android:layout_alignRight="@+id/heightEditText"
-        android:layout_alignEnd="@+id/heightEditText" />
-
+        android:onClick="goToHelp"
+        android:text="@string/help_button_text"
+        android:textSize="18sp"/>
 
 
     <TextView
         android:id="@+id/gallons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/gallons_needed"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="96dp"/>
+        android:layout_marginBottom="96dp"
+        android:text="@string/gallons_needed"
+        android:textAlignment="center"
+        android:textSize="15sp"/>
 
 
 </RelativeLayout>

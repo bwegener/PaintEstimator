@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 
 /**
@@ -15,10 +16,24 @@ import android.view.View;
  */
 public class HelpActivity extends AppCompatActivity {
 
+    private TextView mPaintRequired;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
+
+        // Receive the Intent (from MainActivity)
+        Intent intentFromMain = getIntent();
+        String paintRequired = intentFromMain.getStringExtra("gallons");
+
+        // Populate text view
+        mPaintRequired = (TextView) findViewById(R.id.paintRequired);
+
+        // Fill your TextView with data from the paint required
+        mPaintRequired.setText(paintRequired);
+
+
     }
 
     protected void goToMain(View v)
